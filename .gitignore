@@ -1,3 +1,4 @@
 # Lazarus IDE / FPC
 backup/
 lib/
+*.exe
