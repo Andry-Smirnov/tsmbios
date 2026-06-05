@@ -1,37 +1,49 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="9"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="PortConnectorInfo.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="PortConnectorInfo"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="23"/>
-        <CursorPos X="37" Y="21"/>
+        <CursorPos X="3" Y="11"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\Common\uSMBIOS.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="uSMBIOS"/>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
         <UsageCount Value="20"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit2>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
-    <JumpHistory Count="1" HistoryIndex="0">
+    <JumpHistory Count="3" HistoryIndex="2">
       <Position1>
         <Filename Value="PortConnectorInfo.lpr"/>
-        <Caret Line="9" Column="20" TopLine="1"/>
+        <Caret Line="9" Column="20"/>
       </Position1>
+      <Position2>
+        <Filename Value="PortConnectorInfo.lpr"/>
+        <Caret Line="23" Column="74"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PortConnectorInfo.lpr"/>
+        <Caret Line="9" Column="20"/>
+      </Position3>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

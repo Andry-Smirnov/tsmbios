@@ -1,54 +1,52 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="9"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="ProcessorInformation.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="ProcessorInformation"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="113"/>
-        <CursorPos X="102" Y="130"/>
+        <TopLine Value="45"/>
+        <CursorPos X="12" Y="96"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\Common\uSMBIOS.pas"/>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="uSMBIOS"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1848"/>
+        <CursorPos X="3" Y="1860"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
         <Filename Value="C:\lazarus\fpc\2.6.0\source\rtl\objpas\typinfo.pp"/>
-        <UnitName Value="typinfo"/>
-        <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="127"/>
         <CursorPos X="22" Y="140"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-      </Unit2>
+      </Unit3>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
-    <JumpHistory Count="7" HistoryIndex="6">
+    <JumpHistory Count="13" HistoryIndex="12">
       <Position1>
         <Filename Value="ProcessorInformation.lpr"/>
-        <Caret Line="9" Column="20" TopLine="1"/>
+        <Caret Line="9" Column="20"/>
       </Position1>
       <Position2>
         <Filename Value="ProcessorInformation.lpr"/>
-        <Caret Line="8" Column="33" TopLine="1"/>
+        <Caret Line="8" Column="33"/>
       </Position2>
       <Position3>
         <Filename Value="ProcessorInformation.lpr"/>
-        <Caret Line="9" Column="21" TopLine="1"/>
+        <Caret Line="9" Column="21"/>
       </Position3>
       <Position4>
         <Filename Value="ProcessorInformation.lpr"/>
@@ -66,6 +64,34 @@
         <Filename Value="ProcessorInformation.lpr"/>
         <Caret Line="94" Column="102" TopLine="80"/>
       </Position7>
+      <Position8>
+        <Filename Value="ProcessorInformation.lpr"/>
+        <Caret Line="130" Column="102" TopLine="112"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ProcessorInformation.lpr"/>
+        <Caret Line="9" Column="29"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ProcessorInformation.lpr"/>
+        <Caret Line="95" Column="45" TopLine="57"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ProcessorInformation.lpr"/>
+        <Caret Line="96" Column="12" TopLine="45"/>
+      </Position11>
+      <Position12>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
+        <Caret Line="4511" Column="47" TopLine="4491"/>
+      </Position12>
+      <Position13>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
+        <Caret Line="4347" Column="3" TopLine="4322"/>
+      </Position13>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

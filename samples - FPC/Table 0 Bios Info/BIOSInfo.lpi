@@ -40,7 +40,7 @@
         <UnitName Value="BIOSInfo"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\Common\uSMBIOS.pas"/>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uSMBIOS"/>
       </Unit1>
@@ -54,7 +54,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\Common"/>
+      <OtherUnitFiles Value="..\..\source"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Other>

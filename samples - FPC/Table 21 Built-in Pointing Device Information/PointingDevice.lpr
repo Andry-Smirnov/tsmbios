@@ -3,44 +3,47 @@ program PointingDevice;
 {$mode objfpc}{$H+}
 
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  {$IFDEF UNIX}
+{$IFDEF UseCThreads}
   cthreads,
-  {$ENDIF}{$ENDIF}
-  Classes, SysUtils, uSMBIOS
-  { you can add units after this };
+  {$ENDIF}
+  {$ENDIF}
+  Classes,
+  SysUtils,
+  uSMBIOS { you can add units after this };
 
-procedure GetPointingDeviceInfo;
-Var
-  SMBios: TSMBios;
-  LPointDevice: TBuiltInPointingDeviceInformation;
-begin
-  SMBios:=TSMBios.Create;
-  try
+  procedure GetPointingDeviceInfo;
+  var
+    SMBios: TSMBios;
+    LPointDevice: TBuiltInPointingDeviceInformation;
+  begin
+    SMBios := TSMBios.Create;
+    try
       WriteLn('Built-in Pointing Device Information');
       WriteLn('------------------------------------');
       if SMBios.HasBuiltInPointingDeviceInfo then
-      for LPointDevice in SMBios.BuiltInPointingDeviceInformation do
-      begin
-        WriteLn(Format('Type              %s',[LPointDevice.GetType]));
-        WriteLn(Format('Interface         %s',[LPointDevice.GetInterface]));
-        WriteLn(Format('Number of Buttons %d',[LPointDevice.RAWBuiltInPointingDeviceInfo^.NumberofButtons]));
-        WriteLn;
-      end
+        for LPointDevice in SMBios.BuiltInPointingDeviceInformation do
+        begin
+          WriteLn(Format('Type              %s', [LPointDevice.GetType]));
+          WriteLn(Format('Interface         %s', [LPointDevice.GetInterface]));
+          WriteLn(Format('Number of Buttons %d', [LPointDevice.RAWBuiltInPointingDeviceInfo^.NumberofButtons]));
+          WriteLn;
+        end
       else
-      Writeln('No Built-in Pointing Device Info was found');
-  finally
-   SMBios.Free;
+        WriteLn('No Built-in Pointing Device Info was found');
+    finally
+      SMBios.Free;
+    end;
   end;
-end;
 
 
 begin
- try
+  try
     GetPointingDeviceInfo;
- except
-    on E:Exception do
-        Writeln(E.Classname, ':', E.Message);
- end;
- Writeln('Press Enter to exit');
- Readln;
+  except
+    on E: Exception do
+      WriteLn(E.ClassName, ':', E.Message);
+  end;
+  WriteLn('Press Enter to exit');
+  Readln;
 end.

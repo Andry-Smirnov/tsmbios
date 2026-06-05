@@ -3,14 +3,17 @@ program SMBiosTables;
 {$mode objfpc}{$H+}
 
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
+{$IFDEF UNIX}
+  {$IFDEF UseCThreads}
   cthreads,
-  {$ENDIF}{$ENDIF}
-  Classes, SysUtils, uSMBIOS
-  { you can add units after this };
+  {$ENDIF}
+{$ENDIF}
+  Classes,
+  SysUtils,
+  uSMBIOS;
 
 procedure ListSMBiosTables;
-Var
+var
   SMBios: TSMBios;
   Entry: TSMBiosTableEntry;
 begin

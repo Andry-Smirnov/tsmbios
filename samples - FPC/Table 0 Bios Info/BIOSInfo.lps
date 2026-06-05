@@ -18,7 +18,7 @@
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\Common\uSMBIOS.pas"/>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uSMBIOS"/>
         <UsageCount Value="20"/>

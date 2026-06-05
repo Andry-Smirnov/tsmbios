@@ -1,37 +1,45 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="9"/>
+    <Version Value="12"/>
     <BuildModes Active="Default"/>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="SystemSlotsInfo.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="SystemSlotsInfo"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="44"/>
-        <CursorPos X="84" Y="46"/>
+        <CursorPos X="10" Y="11"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\..\Common\uSMBIOS.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="uSMBIOS"/>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
         <UsageCount Value="20"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="..\..\source\uSMBIOS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit2>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
-    <JumpHistory Count="1" HistoryIndex="0">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
         <Filename Value="SystemSlotsInfo.lpr"/>
-        <Caret Line="68" Column="1" TopLine="43"/>
+        <Caret Line="68" TopLine="43"/>
       </Position1>
+      <Position2>
+        <Filename Value="SystemSlotsInfo.lpr"/>
+        <Caret Line="36" Column="39" TopLine="17"/>
+      </Position2>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>
