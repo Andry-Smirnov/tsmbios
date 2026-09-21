@@ -1,3 +1,4 @@
+{$CODEPAGE UTF8}
 // **************************************************************************************************
 //
 // Unit uSMBIOS
@@ -4639,10 +4640,16 @@ type
     SMBIOSBCDRevision: Byte;
   end;
 
+
 const
   SMBIOS_ANCHOR_STRING_VALUE = $5F4D535F;
   // '_DMI_'
-  SMBIOS_INTERMEDIATE_ANCHOR_STRING_VALUE = [$5F, $44, $4D, $49, $5F];
+{$IFDEF LAZARUS}
+  SMBIOS_INTERMEDIATE_ANCHOR_STRING_VALUE: array[0..4] of Byte = ($5F, $44, $4D, $49, $5F);
+{$ELSE}
+  SMBIOS_INTERMEDIATE_ANCHOR_STRING_VALUE = [$5F, $44, $4D, $49{, $5F}];
+{$ENDIF}
+
 
 function SMBiosAtLeast(const ASMBios: TSMBios; Major, Minor: Integer): Boolean;
 begin
@@ -6293,27 +6300,27 @@ begin
       10 :
         Result := '80487';
       11 :
-        Result := 'Intel® Pentium® processor';
+        Result := 'Intel Pentium processor';
       12 :
-        Result := 'Pentium® Pro processor';
+        Result := 'Pentium Pro processor';
       13 :
-        Result := 'Pentium® II processor';
+        Result := 'Pentium II processor';
       14 :
-        Result := 'Pentium® processor with MMX technology';
+        Result := 'Pentium processor with MMX technology';
       15 :
-        Result := 'Intel® Celeron® processor';
+        Result := 'Intel Celeron processor';
       16 :
-        Result := 'Pentium® II Xeon processor';
+        Result := 'Pentium II Xeon processor';
       17 :
-        Result := 'Pentium® III processor';
+        Result := 'Pentium III processor';
       18 :
         Result := 'M1 Family';
       19 :
         Result := 'M2 Family';
       20 :
-        Result := 'Intel® Celeron® M processor';
+        Result := 'Intel Celeron M processor';
       21 :
-        Result := 'Intel® Pentium® 4 HT processor';
+        Result := 'Intel Pentium 4 HT processor';
       22 .. 23 :
         Result := 'Available for assignment';
       24 :
@@ -6349,13 +6356,13 @@ begin
       39 :
         Result := 'Power PC 750';
       40 :
-        Result := 'Intel® Core Duo processor';
+        Result := 'Intel Core Duo processor';
       41 :
-        Result := 'Intel® Core Duo mobile processor';
+        Result := 'Intel Core Duo mobile processor';
       42 :
-        Result := 'Intel® Core Solo mobile processor';
+        Result := 'Intel Core Solo mobile processor';
       43 :
-        Result := 'Intel® Atom processor';
+        Result := 'Intel Atom processor';
       44 .. 47 :
         Result := 'Available for assignment';
       48 :
@@ -6509,83 +6516,83 @@ begin
       160 :
         Result := 'V30 Family';
       161 :
-        Result := 'Quad-Core Intel® Xeon® processor 3200 Series';
+        Result := 'Quad-Core Intel Xeon processor 3200 Series';
       162 :
-        Result := 'Dual-Core Intel® Xeon® processor 3000 Series';
+        Result := 'Dual-Core Intel Xeon processor 3000 Series';
       163 :
-        Result := 'Quad-Core Intel® Xeon® processor 5300 Series';
+        Result := 'Quad-Core Intel Xeon processor 5300 Series';
       164 :
-        Result := 'Dual-Core Intel® Xeon® processor 5100 Series';
+        Result := 'Dual-Core Intel Xeon processor 5100 Series';
       165 :
-        Result := 'Dual-Core Intel® Xeon® processor 5000 Series';
+        Result := 'Dual-Core Intel Xeon processor 5000 Series';
       166 :
-        Result := 'Dual-Core Intel® Xeon® processor LV';
+        Result := 'Dual-Core Intel Xeon processor LV';
       167 :
-        Result := 'Dual-Core Intel® Xeon® processor ULV';
+        Result := 'Dual-Core Intel Xeon processor ULV';
       168 :
-        Result := 'Dual-Core Intel® Xeon® processor';
+        Result := 'Dual-Core Intel Xeon processor';
       169 :
-        Result := 'Quad-Core Intel® Xeon® processor';
+        Result := 'Quad-Core Intel Xeon processor';
       170 :
-        Result := 'Quad-Core Intel® Xeon® processor';
+        Result := 'Quad-Core Intel Xeon processor';
       171 :
-        Result := 'Dual-Core Intel® Xeon® processor';
+        Result := 'Dual-Core Intel Xeon processor';
       172 :
-        Result := 'Dual-Core Intel® Xeon® processor';
+        Result := 'Dual-Core Intel Xeon processor';
       173 :
-        Result := 'Quad-Core Intel® Xeon® processor';
+        Result := 'Quad-Core Intel Xeon processor';
       174 :
-        Result := 'Quad-Core Intel® Xeon® processor';
+        Result := 'Quad-Core Intel Xeon processor';
       175 :
-        Result := 'Multi-Core Intel® Xeon® processor';
+        Result := 'Multi-Core Intel Xeon processor';
       176 :
-        Result := 'Pentium® III Xeon processor';
+        Result := 'Pentium III Xeon processor';
       177 :
-        Result := 'Pentium® III Processor with Intel';
+        Result := 'Pentium III Processor with Intel';
       178 :
-        Result := 'Pentium® 4 Processor';
+        Result := 'Pentium 4 Processor';
       179 :
-        Result := 'Intel® Xeon® processor';
+        Result := 'Intel Xeon processor';
       180 :
         Result := 'AS400 Family';
       181 :
-        Result := 'Intel® Xeon processor MP';
+        Result := 'Intel Xeon processor MP';
       182 :
         Result := 'AMD Athlon XP Processor Family';
       183 :
         Result := 'AMD Athlon MP Processor Family';
       184 :
-        Result := 'Intel® Itanium® 2 processor';
+        Result := 'Intel Itanium 2 processor';
       185 :
-        Result := 'Intel® Pentium® M processor';
+        Result := 'Intel Pentium M processor';
       186 :
-        Result := 'Intel® Celeron® D processor';
+        Result := 'Intel Celeron D processor';
       187 :
-        Result := 'Intel® Pentium® D processor';
+        Result := 'Intel Pentium D processor';
       188 :
-        Result := 'Intel® Pentium® Processor Extreme';
+        Result := 'Intel Pentium Processor Extreme';
       189 :
-        Result := 'Intel® Core Solo Processor';
+        Result := 'Intel Core Solo Processor';
       190 :
         Result := 'Reserved';
       191 :
-        Result := 'Intel® Core 2 Duo Processor';
+        Result := 'Intel Core 2 Duo Processor';
       192 :
-        Result := 'Intel® Core 2 Solo processor';
+        Result := 'Intel Core 2 Solo processor';
       193 :
-        Result := 'Intel® Core 2 Extreme processor';
+        Result := 'Intel Core 2 Extreme processor';
       194 :
-        Result := 'Intel® Core 2 Quad processor';
+        Result := 'Intel Core 2 Quad processor';
       195 :
-        Result := 'Intel® Core 2 Extreme mobile';
+        Result := 'Intel Core 2 Extreme mobile';
       196 :
-        Result := 'Intel® Core 2 Duo mobile processor';
+        Result := 'Intel Core 2 Duo mobile processor';
       197 :
-        Result := 'Intel® Core 2 Solo mobile processor';
+        Result := 'Intel Core 2 Solo mobile processor';
       198 :
-        Result := 'Intel® Core i7 processor';
+        Result := 'Intel Core i7 processor';
       199 :
-        Result := 'Dual-Core Intel® Celeron® processor';
+        Result := 'Dual-Core Intel Celeron processor';
       200 :
         Result := 'IBM390 Family';
       201 :
@@ -6597,9 +6604,9 @@ begin
       204 :
         Result := 'z/Architectur base';
       205 :
-        Result := 'Intel® Core i5 processor';
+        Result := 'Intel Core i5 processor';
       206 :
-        Result := 'Intel® Core i3 processor';
+        Result := 'Intel Core i3 processor';
       207 .. 209 :
         Result := 'Available for assignment';
       210 :
@@ -6611,27 +6618,27 @@ begin
       213 :
         Result := 'VIA Eden Processor Family';
       214 :
-        Result := 'Multi-Core Intel® Xeon® processor';
+        Result := 'Multi-Core Intel Xeon processor';
       215 :
-        Result := 'Dual-Core Intel® Xeon® processor 3xxx Series';
+        Result := 'Dual-Core Intel Xeon processor 3xxx Series';
       216 :
-        Result := 'Quad-Core Intel® Xeon® processor 3xxx Series';
+        Result := 'Quad-Core Intel Xeon processor 3xxx Series';
       217 :
         Result := 'VIA Nano Processor Family';
       218 :
-        Result := 'Dual-Core Intel® Xeon® processor 5xxx Series';
+        Result := 'Dual-Core Intel Xeon processor 5xxx Series';
       219 :
-        Result := 'Quad-Core Intel® Xeon® processor 5xxx Series';
+        Result := 'Quad-Core Intel Xeon processor 5xxx Series';
       220 :
         Result := 'Available for assignment';
       221 :
-        Result := 'Dual-Core Intel® Xeon® processor 7xxx Series';
+        Result := 'Dual-Core Intel Xeon processor 7xxx Series';
       222 :
-        Result := 'Quad-Core Intel® Xeon® processor 7xxx Series';
+        Result := 'Quad-Core Intel Xeon processor 7xxx Series';
       223 :
-        Result := 'Multi-Core Intel® Xeon® processor 7xxx Series';
+        Result := 'Multi-Core Intel Xeon processor 7xxx Series';
       224 :
-        Result := 'Multi-Core Intel® Xeon® processor 3400 Series';
+        Result := 'Multi-Core Intel Xeon processor 3400 Series';
       225 .. 229 :
         Result := 'Available for assignment';
       230 :
