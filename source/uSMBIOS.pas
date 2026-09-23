@@ -52,7 +52,7 @@ interface
 uses
  SysUtils,
  {$IFDEF MSWINDOWS}
- AnsiStrings,
+ //AnsiStrings,
  Windows,
  {$ENDIF}
  {$IFNDEF NOGENERICS}
